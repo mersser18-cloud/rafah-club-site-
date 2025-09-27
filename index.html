@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>نادي الرفاه الاقتصادي</title>
+  <style>
+    :root{
+      --accent:#1b6f6f; /* غيّريه للون هويتكم */
+      --accent-contrast:#fff;
+      --text:#111;
+      --muted:#555;
+      --overlay: rgba(0,0,0,0.36);
+      font-family: "Tajawal", "Noto Kufi Arabic", system-ui, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;color:var(--text);background:#fff;line-height:1.6}
+    h2{margin-top:0;font-size:1.4rem;color:var(--accent)}
+    a{text-decoration:none;color:var(--accent)}
+    /* Banner */
+    .hero{
+      position:relative;
+      min-height:60vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--accent-contrast);
+      overflow:hidden;
+    }
+    .hero__bg{
+      position:absolute;inset:0;
+      background-position:center;
+      background-size:cover;
+      filter:contrast(0.95) saturate(0.95);
+      z-index:0;
+    }
+    .hero__overlay{position:absolute;inset:0;background:var(--overlay);z-index:1}
+    .hero__container{
+      position:relative;z-index:2;
+      max-width:1100px;padding:2rem;
+      text-align:center;
+    }
+    .logo{
+      position:absolute;top:18px;left:18px;z-index:3;
+      display:flex;align-items:center;gap:.6rem;
+    }
+    .logo img{height:48px;width:auto}
+    .hero h1{
+      font-size:2.2rem;margin:0 0 .6rem;font-weight:700;
+      text-shadow:0 2px 8px rgba(0,0,0,0.35);
+    }
+    .hero p{margin:0 0 1.2rem;color:rgba(255,255,255,0.95);font-size:1.05rem}
+    .cta{display:inline-block;background:var(--accent);color:var(--accent-contrast);padding:.7rem 1.1rem;border-radius:8px;font-weight:600;box-shadow:0 6px 18px rgba(27,111,111,0.16)}
+    /* Sections */
+    section{margin:2rem auto;max-width:1000px;padding:1.2rem 1.4rem;border-radius:10px;background:#fff;border:1px solid #eee;box-shadow:0 6px 20px rgba(20,20,20,0.03)}
+    section ul{padding-right:1.2rem}
+    section ul li{margin:.4rem 0}
+    .alt{background:#f9f9f9;border:none;box-shadow:none}
+    /* Members grid */
+    .members{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;margin-top:1rem}
+    .member{padding:1rem;border:1px solid #ddd;border-radius:8px;text-align:center;background:#fff}
+    .member img{width:80px;height:80px;border-radius:50%;object-fit:cover;margin-bottom:.6rem}
+    /* Contact form */
+    form{margin-top:1rem;display:flex;flex-direction:column;gap:.6rem;max-width:400px}
+    input,textarea{padding:.6rem;border:1px solid #ccc;border-radius:6px}
+    button{background:var(--accent);color:#fff;padding:.7rem;border:none;border-radius:6px;font-weight:600;cursor:pointer}
+    @media (max-width:800px){
+      .hero{min-height:44vh}
+      .hero h1{font-size:1.6rem}
+      .logo{top:12px;left:12px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- بانر -->
+  <header class="hero" role="banner" aria-label="بانر الترحيب">
+    <div class="hero__bg" style="background-image:url('images/university-banner.jpg');"></div>
+    <div class="hero__overlay"></div>
+
+    <div class="logo">
+      <img src="images/logo-small.png" alt="شعار نادي الرفاه الاقتصادي">
+    </div>
+
+    <div class="hero__container">
+      <h1>نادي الرفاه الاقتصادي — نربط بين المعرفة والتطبيق</h1>
+      <p>فضاء طلابي في جامعة جيجل يوفّر ورشات، فعاليات، وموارد لتطوير مهارات الطلبة.</p>
+      <a class="cta" href="#contact">انضم الآن</a>
+    </div>
+  </header>
+
+  <!-- لمحة سريعة -->
+  <section id="about-quick">
+    <h2>لمحة سريعة عن النادي</h2>
+    <p>
+      نادي الرفاه الاقتصادي بجامعة جيجل يسعى لتمكين الطلبة في مجالات الاقتصاد والتسيير من خلال تنظيم ورشات، ندوات، وتقديم مواد تعليمية قابلة للتحميل. نرحّب بكل طلبة الكلية للانضمام والمشاركة.
+    </p>
+  </section>
+
+  <!-- عن النادي -->
+  <section id="about">
+    <h2>عن النادي</h2>
+    <p>
+      تأسس نادي الرفاه الاقتصادي سنة 2019 على يد مجموعة من الطلبة بجامعة جيجل،
+      ومقره الرسمي بكلية العلوم الاقتصادية والتجارية وعلوم التسيير.
+      هدف النادي هو تعزيز المعارف الاقتصادية وربطها بالتطبيق العملي من خلال تنظيم
+      ورشات، ندوات، ومسابقات علمية.
+    </p>
+  </section>
+
+  <!-- الأنشطة -->
+  <section id="activities" class="alt">
+    <h2>أنشطتنا</h2>
+    <ul>
+      <li>ورشة حول ريادة الأعمال – 2025</li>
+      <li>ندوة حول الاقتصاد الرقمي – 2024</li>
+      <li>حملة توعية مالية – 2023</li>
+    </ul>
+  </section>
+
+  <!-- الأعضاء -->
+  <section id="members">
+    <h2>أعضاء الفريق</h2>
+    <div class="members">
+      <div class="member">
+        <img src="images/member1.jpg" alt="رئيس النادي">
+        <h3>باديس</h3>
+        <p>رئيس النادي</p>
+      </div>
+      <div class="member">
+        <img src="images/member2.jpg" alt="نائب الرئيس">
+        <h3>حليم</h3>
+        <p>نائب الرئيس</p>
+      </div>
+      <div class="member">
+        <img src="images/member3.jpg" alt="مسؤول الإعلام">
+        <h3>فاروق</h3>
+        <p>مسؤول الإعلام</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- الموارد -->
+  <section id="resources" class="alt">
+    <h2>الموارد</h2>
+    <p>هنا تجدون ملفات وملخصات مفيدة للطلبة:</p>
+    <ul>
+      <li><a href="docs/entrepreneurship.pdf" download>ملخص ريادة الأعمال (PDF)</a></li>
+      <li><a href="docs/digital-economy.pdf" download>عرض حول الاقتصاد الرقمي</a></li>
+      <li><a href="docs/finance-tips.pdf" download>نصائح مالية للطلبة</a></li>
+    </ul>
+  </section>
+
+  <!-- اتصل بنا -->
+  <section id="contact">
+    <h2>اتصل بنا</h2>
+    <p>يمكنكم التواصل معنا عبر:</p>
+    <ul>
+      <li>📧 البريد: <a href="mailto:rafaheconomicclub@gmail.com">rafaheconomicclub@gmail.com</a></li>
+      <li>📱 فيسبوك: <a href="https://facebook.com/rafaheconomicclub" target="_blank">صفحة النادي</a></li>
+      <li>📸 إنستغرام: <a href="https://instagram.com/rafaheconomicclub" target="_blank">@rafaheconomicclub</a></li>
+    </ul>
+    <form>
+      <input type="text" placeholder="الاسم">
+      <input type="email" placeholder="البريد الإلكتروني">
+      <textarea placeholder="رسالتك" rows="4"></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+  </section>
+
+</body>
+</html>
